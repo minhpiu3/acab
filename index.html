@@ -121,20 +121,21 @@
     </section>
 
     <section id="contact">
-        <h2>Liên hệ</h2>
-        <form action="#" method="post">
-            <label for="name">Họ và tên</label>
-            <input type="text" id="name" name="name" required>
+    <h2>Liên hệ</h2>
+    <form action="save_data.php" method="post">
+        <label for="name">Họ và tên</label>
+        <input type="text" id="name" name="name" required>
 
-            <label for="phone">Số điện thoại</label>
-            <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required placeholder="Nhập số điện thoại (10 số)">
+        <label for="phone">Số điện thoại</label>
+        <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required placeholder="Nhập số điện thoại (10 số)">
 
-            <label for="message">Nội dung</label>
-            <textarea id="message" name="message" rows="4" required></textarea>
+        <label for="message">Nội dung</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
 
-            <button type="submit">Gửi</button>
-        </form>
-    </section>
+        <button type="submit">Gửi</button>
+    </form>
+</section>
+
 
    <button class="contact-button" onclick="window.open('tel:+8415861779');">
     <span>📞 Gọi ngay</span>
