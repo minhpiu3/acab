@@ -90,6 +90,24 @@
                 padding: 15px;
             }
         }
+
+        .contact-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #ff4500;
+            color: #fff;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 50px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            z-index: 1000;
+        }
+
+        .contact-button:hover {
+            background-color: #e63e00;
+        }
     </style>
 </head>
 <body>
@@ -117,6 +135,10 @@
             <button type="submit">Gửi</button>
         </form>
     </section>
+
+    <button class="contact-button" onclick="window.location.href='tel:+84';">
+        Gọi ngay
+    </button>
 
     <script>
         // Hiệu ứng khi lướt tới phần nội dung
