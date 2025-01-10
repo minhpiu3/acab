@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lê Ngọc Hùng</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fff;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #ff4500;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        section {
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 800px;
+            background: #f9f9f9;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transform: translateY(20px);
+            opacity: 0;
+            transition: all 0.6s ease-out;
+        }
+
+        section.visible {
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+        h1, h2 {
+            color: #ff4500;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            margin: 10px 0 5px;
+        }
+
+        input, textarea, button {
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        button {
+            background-color: #ff4500;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #e63e00;
+        }
+        .subtitle {
+            font-size: 1.5rem; /* Tăng kích cỡ dòng tiêu đề */
+            font-weight: bold;
+        }
+        @media (max-width: 600px) {
+            body {
+                font-size: 16px;
+            }
+
+            section {
+                margin: 10px;
+                padding: 15px;
+            }
+            
+            .subtitle {
+            font-size: 1.2rem; /* Tối ưu kích cỡ cho màn hình nhỏ */
+            }
+            
+            header {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <p class="subtitle">Lê Ngọc Hùng - Kỹ thuật viên VTVcab</p>
+    </header>
+
+    <section id="about">
+        <h2>Ngọc Hùng xin chào.</h2>
+        <p>...</p> <!-- Bạn có thể thêm nội dung tại đây -->
+    </section>
+
+    <section id="contact">
+        <h2>Liên hệ</h2>
+        <form action="#" method="post">
+            <label for="name">Họ và tên</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Nội dung</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+
+            <button type="submit">Gửi</button>
+        </form>
+    </section>
+
+    <script>
+        // Hiệu ứng khi lướt tới phần nội dung
+        const sections = document.querySelectorAll('section');
+
+        const revealSections = () => {
+            sections.forEach(section => {
+                const sectionTop = section.getBoundingClientRect().top;
+                if (sectionTop < window.innerHeight - 100) {
+                    section.classList.add('visible');
+                }
+            });
+        };
+
+        window.addEventListener('scroll', revealSections);
+        window.addEventListener('load', revealSections);
+    </script>
+</body>
+</html>
